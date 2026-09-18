@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -25,8 +25,8 @@
   --color-mastery-developing: #FFC107;
   --color-mastery-needs-support: #FF7043;
   --color-mastery-not-assessed: #E0E0E0;
-  --font-heading: 'Nunito', 'Inter', sans-serif;
-  --font-body: 'Inter', 'Nunito', sans-serif;
+  --font-heading: 'Fredoka', 'Nunito', sans-serif;
+  --font-body: 'Nunito', sans-serif;
 }
 
 body {
@@ -198,3 +198,5 @@ html {
     @apply font-sans;
   }
 }
+
+
