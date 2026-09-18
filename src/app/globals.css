@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --color-peach: #FFBE91;
+  --color-peach-light: #FFD4B3;
+  --color-peach-dark: #E5A070;
+  --color-soft-peach: #FFDDB0;
+  --color-soft-peach-light: #FFE8CC;
+  --color-soft-peach-dark: #E5C490;
+  --color-ivory: #FFFCE1;
+  --color-ivory-light: #FFFEF0;
+  --color-ivory-dark: #F5F0D0;
+  --color-sky: #CFEBFF;
+  --color-sky-light: #E5F4FF;
+  --color-sky-dark: #A8D8F0;
+  --color-charcoal: #2D2D2D;
+  --color-charcoal-light: #4A4A4A;
+  --color-charcoal-lighter: #6B6B6B;
+  --color-mastery-secure: #4CAF50;
+  --color-mastery-developing: #FFC107;
+  --color-mastery-needs-support: #FF7043;
+  --color-mastery-not-assessed: #E0E0E0;
+  --font-heading: 'Nunito', 'Inter', sans-serif;
+  --font-body: 'Inter', 'Nunito', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-peach);
+  color: var(--color-charcoal);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-peach);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-soft-peach);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-peach);
+}
