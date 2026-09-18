@@ -33,6 +33,13 @@
 - [x] Set up database types/schema
 - [x] Created ANTIGRAVITY-README.md
 
+### 2026-09-18 — Phase 3: AI Learning Investigator & Classification ✨
+- [x] Built `src/lib/classifier.ts` deterministic skill classifier & confidence rating engine
+- [x] Built `src/components/investigator/InvestigatorFeed.tsx` for real-time hypothesis, probe, evidence, and bottleneck tracking
+- [x] Built `src/components/investigator/LearningDNA.tsx` for multidimensional skill fingerprinting (no single-score reduction)
+- [x] Built `src/components/investigator/WhyPanelModal.tsx` for plain-language, explainable diagnostic reasoning
+- [x] Integrated interactive Learning DNA & WHY Panel into Teacher Intelligence Dashboard (`/teacher`)
+
 ---
 
 ## Architecture Notes

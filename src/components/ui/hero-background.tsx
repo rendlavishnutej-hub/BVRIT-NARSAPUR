@@ -1,50 +1,22 @@
 'use client';
 
-import { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Grid } from '@react-three/drei';
-import * as THREE from 'three';
-
-function AnimatedGrid() {
-  const gridRef = useRef<THREE.Group>(null!);
-  
-  useFrame((state) => {
-    if (gridRef.current) {
-      // Gentle floating animation
-      const t = state.clock.getElapsedTime();
-      gridRef.current.position.y = Math.sin(t * 0.5) * 0.3;
-      gridRef.current.rotation.x = Math.PI / 2.5 + Math.sin(t * 0.2) * 0.02;
-      
-      // Moving grid effect
-      gridRef.current.position.z = (t * 0.5) % 1;
-    }
-  });
-
-  return (
-    <group ref={gridRef} position={[0, -2, 0]} rotation={[Math.PI / 2.5, 0, 0]}>
-      <Grid
-        position={[0, 0, 0]}
-        args={[30, 30]}
-        cellSize={1}
-        cellThickness={1}
-        cellColor="#FFBE91"
-        sectionSize={3}
-        sectionThickness={1.5}
-        sectionColor="#FFDDB0"
-        fadeDistance={20}
-        fadeStrength={1}
-      />
-    </group>
-  );
-}
+import React from 'react';
 
 export default function HeroBackground() {
   return (
-    <div className="absolute inset-0 -z-10 bg-ivory overflow-hidden opacity-60">
-      <Canvas camera={{ position: [0, 2, 8], fov: 45 }}>
-        <fog attach="fog" args={['#FFFCE1', 5, 20]} />
-        <AnimatedGrid />
-      </Canvas>
+    <div className="absolute inset-0 -z-10 bg-ivory overflow-hidden opacity-80 pointer-events-none">
+      {/* Animated Subtle Floating Orbs & Grid Pattern */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-peach/30 via-soft-peach/40 to-sky-blue/30 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-gradient-to-br from-sky-blue/20 to-peach/20 rounded-full blur-2xl" />
+
+      {/* Modern Grid Line Pattern */}
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `radial-gradient(#2D2D2D 1px, transparent 1px)`,
+          backgroundSize: '24px 24px',
+        }}
+      />
     </div>
   );
 }
